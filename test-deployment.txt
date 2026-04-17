@@ -1,0 +1,8 @@
+Test FTP Deployment - GitHub Actions
+
+Diese Datei testet das automatische Deployment zu Hostpoint.
+
+Datum: 17.04.2026
+Status: Testing GitHub Actions zu FTP bruno-birkhofer.ch
+
+Falls diese Datei in /www/tinderfoto.ch/ auf dem Hostpoint-Server erscheint, funktioniert das automatische Deployment!
