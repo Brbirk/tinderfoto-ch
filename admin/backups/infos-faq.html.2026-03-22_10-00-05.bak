@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infos & FAQ zum Tinder Fotoshooting - Häufig gestellte Fragen beantwortet. Alles über Vorbereitung, Kleidung, Make-up und was du erwarten kannst.">
+    <meta name="keywords" content="Tinder Fotoshooting, FAQ, Infos, Vorbereitung, Dating Fotos Schweiz">
+    <meta name="author" content="screensolutions gmbh">
+    <title>Infos & FAQ – Häufige Fragen zum Tinder Fotoshooting | tinderfoto.ch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FAQ Schema (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Wie muss ich mich auf das Shooting vorbereiten?","acceptedAnswer":{"@type":"Answer","text":"Bereite dich einige Tage vor dem Shooting vor: Schlaf ausreichend, mach dich frisch und gepflegt. Am Tag des Shootings: Frisur und Make-up sollten sitzen, trag bequeme Kleidung, die deine Persönlichkeit ausstrahlt."}},
+        {"@type":"Question","name":"Was muss ich an Kleidern mitnehmen?","acceptedAnswer":{"@type":"Answer","text":"Bring deine Lieblingskleider mit. Vermeide starke Muster wie große Karos oder Streifen, da diese auf Fotos unangenehm wirken können."}},
+        {"@type":"Question","name":"Kann ich auch Accessoires mitnehmen?","acceptedAnswer":{"@type":"Answer","text":"Ja, gerne! Schmuck, Sonnenbrillen, Sportgeräte – alles, was zu deinem Hobby oder deinem Stil passt."}},
+        {"@type":"Question","name":"Darf ich einen Freund oder eine Freundin mitnehmen?","acceptedAnswer":{"@type":"Answer","text":"Ja, das ist kein Problem. Es kann sogar hilfreich sein, eine vertraute Person dabei zu haben."}},
+        {"@type":"Question","name":"Werde ich geschminkt?","acceptedAnswer":{"@type":"Answer","text":"Das Make-up ist nicht im Standard-Paket enthalten, kann aber optional für CHF 150.- hinzugebucht werden."}},
+        {"@type":"Question","name":"Ich bin nicht fotogen","acceptedAnswer":{"@type":"Answer","text":"Keine Sorge! Unsere Fotografen verstehen es, jeden Menschen in seinem besten Licht zu zeigen."}},
+        {"@type":"Question","name":"Werde ich mit Photoshop verändert?","acceptedAnswer":{"@type":"Answer","text":"Nein, keine extremen Veränderungen. Wir optimieren Schnitt, Helligkeit und Kontrast im natürlichen Rahmen."}}
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-tinderfoto.png" alt="Tinderfoto Logo">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">ANGEBOT</a>
+                    <a href="infos-faq.html" class="nav-link active">INFOS / FAQ</a>
+                    <a href="ueber-uns.html" class="nav-link">ÜBER UNS</a>
+                    <a href="buchen.html" class="nav-link">BUCHEN / KONTAKT</a>
+                    <a href="blog.php" class="nav-link">BLOG</a>
+                </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: Text links, Bilder rechts -->
+    <section class="faq-page-content">
+        <div class="container">
+            <div class="faq-two-col">
+                <!-- Left: Text -->
+                <div class="faq-text-col">
+                    <h1>Infos & FAQ zum Tinder Fotoshooting</h1>
+
+                    <h3>Warum du mit professionellen Fotos mehr Erfolg hast.</h3>
+                    <p>Wenn du dich über Tinder auf Partnersuche machst, solltest du unbedingt grossen Wert auf professionelle Bilder legen. Gerade bei Tinder wird anhand deiner Profilbilder innert Sekunden entschieden, ob du «top» oder «flopp» bist. Lass dich deshalb nicht wegen einem schlechten Foto einfach so wegwischen, denn mit einem aussagekräftigen und durchdachten Profilfoto kannst du in diesen wenigen Sekunden deine Welt verändern.</p>
+                    <p>Wie das funktioniert? Ganz einfach. Das menschliche Gehirn ist in der Lage, innert wenigen Sekunden eine grosse Menge an Informationen zu verarbeiten. Es liegt nun mal in der Natur des Menschen, dass wir beim ersten Betrachten eines Gesichtes innert Millisekunden beurteilen und entscheiden, ob wir die Person sympathisch und anziehend finden. Dabei geht es nicht nur immer um das Optische, du kannst mit Bildern auch viele Informationen weitergeben, z.B. über deinen Beruf, deine Hobbies, deine Lebenseinstellung usw. Bist du der fröhliche Typ Mensch oder eher der nachdenkliche, ruhig oder impulsiv, intro- oder extrovertiert, sinnlich oder oberflächlich … All diese Eigenschaften kannst du mit deinen Bildern dem Betrachter mitgeben, und nur so können die richtigen Personen auf dich ansprechen.</p>
+                    <p><strong>Mit einem Partybild oder einem Selfie im Badezimmer funktioniert dies mit Bestimmtheit und 100%-iger Garantie nicht!</strong></p>
+
+                    <h3>Wie kann dir ein Fotograf bei deinen Zielen helfen?</h3>
+                    <p>Gesichtsausdruck, Körperhaltung, deine Bewegung, Kleidung, Hintergrund und das richtige Licht sind wichtige Faktoren, die viel über dich und deine Persönlichkeit erzählen. Damit du all dies mit deinen Bildern erzählen kannst, braucht es <a href="ueber-uns.html">einen erfahrenen Profi</a>, der neben dem technischen Know-how auch eine grosse Portion an Feingefühl mitbringt, um dich nicht nur ins schönste Licht, sondern eben auch in das für dich beste Licht rückt.</p>
+                    <p>Ein Profi findet nicht nur die schönen Perspektiven zu deinem Äusseren, er sieht auch hinter die Facetten und erkennt das Wesen im Menschen und erarbeitet mit dir die zu dir passenden Bilder. Dabei setzt er dich nicht in «Tussi-» oder «Mackerposen», er lässt dich wie du bist und hilft dir dabei, dich mit kleinen und feinen Anweisungen optimal und vorteilhaft darzustellen. Natürlich wirken kann nur, wer auch natürlich ist, und deshalb machen wir keine Person aus dir, die du nicht bist. Du willst ja letztendlich ein passendes Gegenüber finden.</p>
+
+                    <h3>Warum ist das Foto so wichtig?</h3>
+                    <p>Das Foto erzeugt immer das erste, entscheidende Gefühl. Nicht umsonst wünschen auch Unternehmen für Bewerbungen ein Bild, auch wenn sie dieses nicht vorschreiben dürfen. Bilder machen uns nahbar und hinterlassen einen bleibenden Eindruck. Online-Partnervermittlungen wie Tinder, ElitePartner & Co. verweisen immer wieder darauf, dass gute Profilfotos 90 % mehr Anfragen von interessierten potenziellen Partnern generieren. Die Partnervermittler müssen es wissen, denn sie werten für solche Fakten riesige Datenmengen aus.</p>
+
+                    <h3>Warum machen wir authentische Fotos von dir?</h3>
+                    <p>Die meisten Online-Partnervermittlungen ermöglichen das Einstellen mehrerer Bilder. Dies nutzen wir aus, um Authentizität zu vermitteln. Diese Bilder zeigen dich beim Hobby, vielleicht beim Spaziergang mit dem Hund, bei einer Wanderung, möglicherweise auch bei der Arbeit. Wichtig dabei ist, dass der vermittelte Eindruck stimmt. Ein gestelltes Bild vom Skiabfahrtslauf, den du nicht beherrschst, oder im Porsche, den du nicht besitzt, wäre sehr fatal. Spätestens nach dem zweiten Date fliegen solche Hochstapeleien auf, zurück bleibt eine gigantische Enttäuschung, die am Selbstvertrauen nagt.</p>
+                </div>
+
+                <!-- Right: Bilder -->
+                <div class="faq-images-col">
+                    <img src="images/partnersuche2-scaled.jpg" alt="Portrait einer Frau auf Partnersuche – professionelles Dating-Foto" loading="lazy">
+                    <img src="images/partnersuche3-scaled.jpg" alt="Portrait eines Mannes für Online-Dating – Tinder Profilfoto" loading="lazy">
+                    <img src="images/partnersuche1-scaled.jpg" alt="Natürliches Dating-Foto einer Frau – authentisches Profilbild" loading="lazy">
+                    <img src="images/partnersuche6-scaled.jpg" alt="Mann im Anzug – professionelles Tinder-Foto für Männer" loading="lazy">
+                    <img src="images/tinderfoto-8.jpg" alt="Natürliches Dating-Foto – Outdoor Shooting" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Foto-Galerie Banner (volle Breite) -->
+    <section class="faq-gallery">
+        <img src="images/partnersuche1-400x284.jpg" alt="Dating-Foto einer Frau" loading="lazy">
+        <img src="images/partnersuche2-400x284.jpg" alt="Dating-Foto einer Frau lachend" loading="lazy">
+        <img src="images/partnersuche5-400x284.jpg" alt="Dating-Foto eines Mannes" loading="lazy">
+        <img src="images/partnersuche6-400x284.jpg" alt="Dating-Foto eines Mannes im Anzug" loading="lazy">
+    </section>
+
+    <!-- SECTION 3: CTA Button + FAQ's -->
+    <section class="faq-section">
+        <div class="container">
+
+            <!-- CTA Button -->
+            <div class="section-cta">
+                <a href="buchen.html" class="cta-button cta-primary">Jetzt unverbindlich anfragen</a>
+            </div>
+
+            <!-- FAQ Heading -->
+            <h2>FAQ'S</h2>
+
+            <!-- FAQ 1 -->
+            <h3>Wie muss ich mich auf das Shooting vorbereiten?</h3>
+            <div class="faq-answer-text">
+                <p><strong>Ein paar Tage zuvor:</strong></p>
+                <p>Mach dir ein paar Gedanken über dich und wer du bist. Was ist dir wichtig an dir selbst, und was möchtest du von dir preisgeben. Möchtest du z.B. dein Hobby zeigen, dann bereite dich entsprechend darauf vor und teile uns dies mit. Der Gang zum Friseur schadet bestimmt nicht, und die Fingernägel sollten entsprechend in Ordnung sein. Wenn du als Mann einen 3-Tage-Bart beim Shooting haben willst, ist es wichtig, die Rasur entsprechend einzuplanen.</p>
+                <p><strong>Vor dem Shoot:</strong></p>
+                <p>Die Haare sollten frisch gewaschen und gepflegt sein. Damen sollten das Make-up auftragen, mit welchem sie sich am wohlsten und schönsten fühlen. Falls eine Make-up-Artistin dazu gebucht wurde, bitte komplett ohne Make-up anreisen.</p>
+            </div>
+
+            <!-- FAQ 2 -->
+            <h3>Was muss ich an Kleidern mitnehmen?</h3>
+            <div class="faq-answer-text">
+                <p>Nimm deine Lieblingskleider mit, idealerweise solche, in denen du dich wohl und attraktiv fühlst. Bring gerne 3–5 verschiedene Outfits mit, damit wir Abwechslung in die Bilder bringen können. Vermeide starke Muster wie grosse Karos oder dicke Streifen – diese können auf Fotos unruhig wirken. Einfarbige oder dezent gemusterte Kleidung funktioniert am besten.</p>
+            </div>
+
+            <!-- FAQ 3 -->
+            <h3>Kann ich auch Accessoires mitnehmen?</h3>
+            <div class="faq-answer-text">
+                <p>Ja, gerne! Schmuck, Sonnenbrillen, Hüte, Sportgeräte – alles, was zu deinem Hobby oder deinem Stil passt, kannst du gerne mitnehmen und in den Fotos verwenden. Das verleiht den Bildern mehr Persönlichkeit und Authentizität.</p>
+            </div>
+
+            <!-- FAQ 4 -->
+            <h3>Darf ich einen Freund oder eine Freundin mitnehmen zum Tinder Fotograf?</h3>
+            <div class="faq-answer-text">
+                <p>Ja, das ist kein Problem und kann sogar hilfreich sein. Eine vertraute Person dabei zu haben kann dafür sorgen, dass du dich entspannter fühlst und die Fotos natürlicher wirken.</p>
+            </div>
+
+            <!-- FAQ 5 -->
+            <h3>Werde ich geschminkt?</h3>
+            <div class="faq-answer-text">
+                <p>Das Make-up ist nicht im Standard-Paket enthalten. Du kannst dich gerne selbst schminken oder mit deinem eigenen Make-up kommen. Falls du professionelles Make-up wünschst, können wir eine erfahrene Make-up Artistin für dich arrangieren. Das kostet CHF 150.- extra.</p>
+            </div>
+
+            <!-- FAQ 6 -->
+            <h3>Ich fühle mich nicht attraktiv genug / Ich bin nicht fotogen</h3>
+            <div class="faq-answer-text">
+                <p>Das hören wir regelmässig – und es ist absolut kein Problem! Unsere Fotografen verstehen es, jeden Menschen in seinem besten Licht zu zeigen. Mit der richtigen Beleuchtung, dem richtigen Posing und der passenden Perspektive kann wirklich jeder fotogen aussehen. Wir bringen deine natürliche Ausstrahlung zum Vorschein.</p>
+            </div>
+
+            <!-- FAQ 7 -->
+            <h3>Werde ich nach dem Shooting mit Photoshop verändert?</h3>
+            <div class="faq-answer-text">
+                <p>Nein, wir machen keine extremen oder künstlichen Photoshop-Veränderungen. Authentizität ist das Wichtigste. Wir optimieren den Schnitt, die Helligkeit und den Kontrast, entfernen kleine Unreinheiten oder Rötungen – aber nur im natürlichen Rahmen. Du siehst auf den Fotos immer noch wie dein authentisches Ich aus.</p>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="section-cta">
+                <a href="buchen.html" class="cta-button cta-primary">Jetzt unverbindlich anfragen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4 class="footer-heading">screensolutions gmbh / Bruno Birkhofer</h4>
+                    <address class="footer-address">
+                        screensolutions gmbh<br>
+                        Bruno Birkhofer<br>
+                        Fehlwiesstrasse 34<br>
+                        CH-8580 Amriswil / Hefenhofen<br>
+                        Schweiz
+                    </address>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Kontakt:</h4>
+                    <p class="footer-contact">
+                        Tel: <a href="tel:+41763441794">076 344 17 94</a><br>
+                        Mail: <a href="mailto:info@screensolutions.ch">info@screensolutions.ch</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed & Powered by screensolutions gmbh / Affeltrangen - Schweiz</p>
+            </div>
+        </div>
+    </footer>
+<script src="js/main.js"></script>
+</body>
+</html>

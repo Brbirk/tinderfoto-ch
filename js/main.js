@@ -1,0 +1,411 @@
+// === AKTIVER MENÜPUNKT AUTOMATISCH HERVORHEBEN ===
+(function() {
+    var path = window.location.pathname;
+    var navLinks = document.querySelectorAll('.nav-link, nav a');
+    
+    // Remove all existing active classes first
+    navLinks.forEach(function(link) {
+        link.classList.remove('active');
+    });
+    
+    // Determine which page we're on
+    var activePage = '';
+    if (path === '/' || path.indexOf('index.html') > -1 || path.indexOf('index.php') > -1) {
+        activePage = 'index';
+    } else if (path.indexOf('infos-faq') > -1) {
+        activePage = 'infos-faq';
+    } else if (path.indexOf('ueber-uns') > -1) {
+        activePage = 'ueber-uns';
+    } else if (path.indexOf('buchen') > -1 || path.indexOf('kontakt') > -1) {
+        activePage = 'buchen';
+    } else if (path.indexOf('blog') > -1) {
+        activePage = 'blog';
+    }
+    
+    // Set active class on matching nav link
+    navLinks.forEach(function(link) {
+        var href = link.getAttribute('href') || '';
+        if (activePage === 'index' && (href.indexOf('index') > -1 || href === '/')) {
+            link.classList.add('active');
+        } else if (activePage === 'infos-faq' && href.indexOf('infos-faq') > -1) {
+            link.classList.add('active');
+        } else if (activePage === 'ueber-uns' && href.indexOf('ueber-uns') > -1) {
+            link.classList.add('active');
+        } else if (activePage === 'buchen' && href.indexOf('buchen') > -1) {
+            link.classList.add('active');
+        } else if (activePage === 'blog' && href.indexOf('blog') > -1) {
+            link.classList.add('active');
+        }
+    });
+})();
+
+// Tinderfoto.ch Main JavaScript
+// Handles navigation, scrolling, interactions, forms, and UI elements
+
+document.addEventListener('DOMContentLoaded', function() {
+  initMobileMenu();
+  initStickyHeader();
+  initSmoothScroll();
+  initAccordion();
+  initFormValidation();
+  initMathCaptcha();
+  initWhatsAppTooltip();
+});
+
+// 1. Mobile Hamburger Menu Toggle
+function initMobileMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+  const body = document.body;
+  const header = document.querySelector('header');
+
+  if (!hamburger) return;
+
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    body.classList.toggle('nav-open');
+    if (header) {
+      header.classList.toggle('nav-open');
+    }
+    hamburger.classList.toggle('active');
+  });
+
+  // Close menu when clicking on a nav link
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      body.classList.remove('nav-open');
+      if (header) {
+        header.classList.remove('nav-open');
+      }
+      if (hamburger) {
+        hamburger.classList.remove('active');
+      }
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!nav || !hamburger) return;
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      body.classList.remove('nav-open');
+      if (header) {
+        header.classList.remove('nav-open');
+      }
+      if (hamburger) {
+        hamburger.classList.remove('active');
+      }
+    }
+  });
+}
+
+// 2. Sticky Header on Scroll
+function initStickyHeader() {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+}
+
+// 3. Smooth Scroll for Anchor Links
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      e.preventDefault();
+
+      // Close mobile menu if open
+      document.body.classList.remove('nav-open');
+      const header = document.querySelector('header');
+      if (header) header.classList.remove('nav-open');
+      const hamburger = document.querySelector('.hamburger');
+      if (hamburger) hamburger.classList.remove('active');
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+}
+
+// 4. FAQ Accordion Functionality
+function initAccordion() {
+  // Support both native <details> elements and custom accordion elements
+  const details = document.querySelectorAll('details');
+  details.forEach(detail => {
+    detail.addEventListener('click', function(e) {
+      // Only handle if clicking on summary
+      if (e.target.tagName === 'SUMMARY' || e.target.closest('summary')) {
+        // Close other open accordion items
+        details.forEach(otherDetail => {
+          if (otherDetail !== detail && otherDetail.open) {
+            otherDetail.open = false;
+            otherDetail.classList.remove('active');
+          }
+        });
+        // Add active class
+        detail.classList.toggle('active');
+      }
+    });
+  });
+
+  // Custom accordion support (divs with data-accordion attribute)
+  const customAccordions = document.querySelectorAll('[data-accordion]');
+  customAccordions.forEach(accordion => {
+    const header = accordion.querySelector('[data-accordion-header]');
+    const content = accordion.querySelector('[data-accordion-content]');
+
+    if (!header || !content) return;
+
+    header.addEventListener('click', function() {
+      const isActive = accordion.classList.contains('active');
+
+      // Close other accordion items in the same group
+      const group = accordion.closest('[data-accordion-group]');
+      if (group) {
+        group.querySelectorAll('[data-accordion]').forEach(item => {
+          if (item !== accordion) {
+            item.classList.remove('active');
+            const itemContent = item.querySelector('[data-accordion-content]');
+            if (itemContent) {
+              itemContent.style.maxHeight = null;
+            }
+          }
+        });
+      }
+
+      // Toggle current item
+      accordion.classList.toggle('active');
+
+      if (!isActive) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+  });
+}
+
+// 5. Simple Form Validation
+function initFormValidation() {
+  const forms = document.querySelectorAll('form[data-validate]');
+
+  forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      if (!validateForm(this)) {
+        e.preventDefault();
+      }
+    });
+
+    // Real-time validation
+    const inputs = form.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('blur', function() {
+        validateField(this);
+      });
+      input.addEventListener('change', function() {
+        validateField(this);
+      });
+    });
+  });
+}
+
+function validateForm(form) {
+  const inputs = form.querySelectorAll('[required]');
+  let isValid = true;
+
+  inputs.forEach(input => {
+    if (!validateField(input)) {
+      isValid = false;
+    }
+  });
+
+  // Validate math captcha if present
+  const captchaInput = form.querySelector('[name="captcha-answer"]');
+  if (captchaInput) {
+    const correctAnswer = form.dataset.captchaAnswer;
+    if (captchaInput.value != correctAnswer) {
+      showError(captchaInput, 'Falsche Antwort. Bitte versuchen Sie es erneut.');
+      isValid = false;
+    }
+  }
+
+  return isValid;
+}
+
+function validateField(field) {
+  const type = field.type;
+  const value = field.value.trim();
+  let isValid = true;
+  let errorMessage = '';
+
+  // Required field
+  if (field.hasAttribute('required') && !value) {
+    isValid = false;
+    errorMessage = 'Dieses Feld ist erforderlich.';
+  }
+
+  // Email validation
+  if (type === 'email' && value) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value)) {
+      isValid = false;
+      errorMessage = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+    }
+  }
+
+  // Phone validation
+  if (type === 'tel' && value) {
+    const phoneRegex = /^[0-9\s\-\+\(\)]+$/;
+    if (!phoneRegex.test(value) || value.replace(/\D/g, '').length < 9) {
+      isValid = false;
+      errorMessage = 'Bitte geben Sie eine gültige Telefonnummer ein.';
+    }
+  }
+
+  // Minimum length
+  if (field.hasAttribute('minlength')) {
+    const minLength = parseInt(field.getAttribute('minlength'));
+    if (value && value.length < minLength) {
+      isValid = false;
+      errorMessage = `Mindestens ${minLength} Zeichen erforderlich.`;
+    }
+  }
+
+  if (isValid) {
+    clearError(field);
+  } else {
+    showError(field, errorMessage);
+  }
+
+  return isValid;
+}
+
+function showError(field, message) {
+  clearError(field);
+  field.classList.add('error');
+
+  const errorDiv = document.createElement('div');
+  errorDiv.className = 'field-error';
+  errorDiv.textContent = message;
+  field.parentNode.insertBefore(errorDiv, field.nextSibling);
+}
+
+function clearError(field) {
+  field.classList.remove('error');
+  const errorDiv = field.parentNode.querySelector('.field-error');
+  if (errorDiv) {
+    errorDiv.remove();
+  }
+}
+
+// 6. Math Captcha
+function initMathCaptcha() {
+  const captchaContainers = document.querySelectorAll('[data-captcha]');
+
+  captchaContainers.forEach(container => {
+    generateMathProblem(container);
+  });
+}
+
+function generateMathProblem(container) {
+  const num1 = Math.floor(Math.random() * 20) + 1;
+  const num2 = Math.floor(Math.random() * 20) + 1;
+  const operators = ['+', '-'];
+  const operator = operators[Math.floor(Math.random() * operators.length)];
+
+  let answer;
+  if (operator === '+') {
+    answer = num1 + num2;
+  } else {
+    answer = num1 - num2;
+  }
+
+  const problem = `${num1} ${operator} ${num2}`;
+  const form = container.closest('form');
+
+  if (form) {
+    form.dataset.captchaAnswer = answer;
+  }
+
+  const problemText = container.querySelector('[data-captcha-problem]');
+  if (problemText) {
+    problemText.textContent = problem;
+  }
+
+  const answerInput = container.querySelector('[name="captcha-answer"]');
+  if (answerInput) {
+    answerInput.value = '';
+    answerInput.addEventListener('input', function() {
+      this.value = this.value.replace(/\D/g, '');
+    });
+  }
+
+  // Add refresh button
+  const refreshBtn = container.querySelector('[data-captcha-refresh]');
+  if (refreshBtn) {
+    refreshBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      generateMathProblem(container);
+    });
+  }
+}
+
+// 7. WhatsApp Button Tooltip
+function initWhatsAppTooltip() {
+  const whatsappBtn = document.querySelector('[data-whatsapp]');
+  if (!whatsappBtn) return;
+
+  const tooltip = whatsappBtn.querySelector('[data-tooltip]');
+  if (!tooltip) return;
+
+  // Show tooltip on hover (desktop)
+  whatsappBtn.addEventListener('mouseenter', function() {
+    tooltip.classList.add('visible');
+  });
+
+  whatsappBtn.addEventListener('mouseleave', function() {
+    tooltip.classList.remove('visible');
+  });
+
+  // Toggle tooltip on click (mobile)
+  whatsappBtn.addEventListener('click', function(e) {
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      tooltip.classList.toggle('visible');
+    }
+  });
+
+  // Close tooltip when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!whatsappBtn.contains(e.target)) {
+      tooltip.classList.remove('visible');
+    }
+  });
+}
+
+// Utility: Detect if device is mobile
+function isMobile() {
+  return window.innerWidth < 768;
+}
+
+// Re-initialize on window resize (for responsive adjustments)
+let resizeTimer;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    // Add any responsive logic here
+  }, 250);
+});
